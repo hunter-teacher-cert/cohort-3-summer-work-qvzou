@@ -60,10 +60,11 @@ public class Array2DPractice
   */
   public static void printBoard( char[][] board )
   {
-    for (r=0; r<board.length; r++){
-      for (c=0; c<board[r].length; c++){
+    for (int r=0; r<board.length; r++){
+      for (int c=0; c<board[r].length; c++){
         System.out.print(board[r][c])
       }
+      System.out.println();
     }
   }
 
@@ -97,9 +98,16 @@ public class Array2DPractice
      creates and returns a new 2D array of char the same size as
      original and copies all the elements
   */
+  //non-jagged arrays
   public static char[][] copyBoard( char[][] original )
   {
-    /* YOUR AWESOME CODE HERE */
+   char[][] food = new char [original.length][original[0].length];
+    for (int r= 0; r<food.length; r++){
+      for (int c = 0; c<food[r].length; c++){
+        food [r][c] = original[r]
+[c];      }
+    }
+    return food;
   }
 
 
@@ -142,8 +150,23 @@ public class Array2DPractice
      This method will search through the 2D array board and it will
      explode each square that contains the char c (using the above
      definition of exploding).
+
      Example:
+
      Given the array
+
+     qqzqq
+     qqqqq
+     qqqqq
+     qqqqq
+     qzqqq
+     qqqqq
+     qqqqz
+
+     ...
+     explodeAllchar(board,'z')
+     will change board to
+
      qXzXq
      qXXXq
      qqqqq
@@ -151,7 +174,7 @@ public class Array2DPractice
      XzXqq
      XXXXX
      qqqXz
-     explodeAllchar(board,'z') will change board to:
+
   */
   public static void explodeAllChar(char[][] board, char c)
   {
@@ -203,6 +226,7 @@ public class Array2DPractice
   public static void main( String[] args )
   {
     char[][] b = buildBoard(5,10,'z');
+    printBoard(b);
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
