@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
  * Conway's Game of Life by Team AreWeSentientYet?
-
+Qianhui Vanessa Zou
  * collaborators: Patti Elfers, Alana Robinson, William LaMorie, Qianhui Vanessa Zou
  */
 
