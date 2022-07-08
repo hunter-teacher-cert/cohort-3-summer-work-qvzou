@@ -88,20 +88,33 @@ public class Rational
     
   }
 
-
-  // divide
-  // same as multiply, except operation is division
-  public void divide( Rational r )
-  {
+ public void divide( Rational r )
+  { 
+    if(r._numerator==0){
+      System.out.println("Invalid, cannot divide by 0");
+    }else{
     _numerator *= r._denominator;
     _denominator *= r._numerator;
+    }
   }
+ 
 
-  // public void simplify(){
-  //   for(int x=_numerator; x<2; x--){
-      
-  //   }
+ public void simplify(){
+     for(int x=_numerator; x>1; x--){
+        if(_numerator%x==0 && _denominator%x==0){
+          //System.out.println("Is divisible by "+ x);
+          _numerator /= x;
+          _denominator /= x;
+        }
+     }
+ }
     
-  }
+ public boolean equals( Rational other ){
+   other.simplify();
+   this.simplify();
+   return (_numerator == other._numerator &&
+          _denominator == other._denominator);
+ }
+
 
 }//end class

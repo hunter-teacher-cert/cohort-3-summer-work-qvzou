@@ -34,7 +34,28 @@ public class Driver
     
       System.out.print( r + " / " + t + " = ");
       r.divide(t);
+
+      r = new Rational( 3, 7 );
+      t = new Rational( 0, 7 );
+      System.out.print( r + " / " + t + " = ");
+      r.divide(t);
       System.out.println(r);
+      System.out.println();
+      System.out.println("x starts as " + x);
+      x.simplify();
+      System.out.println("x simplified is: " +  x );
+      System.out.println();
+      x = new Rational( 42  , 36);
+      System.out.println("x starts as " + x);
+      x.simplify();
+      System.out.println("x simplified is: " +  x );
+
+      System.out.println();
+    
+      x = new Rational( 2  , 4);
+      w = new Rational( 3  , 6);
+      System.out.println("Is "+ w + " equal to " + x);
+      System.out.println(x.equals(w));
 
   }
 
