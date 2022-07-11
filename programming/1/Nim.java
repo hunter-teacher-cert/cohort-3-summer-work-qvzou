@@ -1,3 +1,9 @@
+/**
+ * Game of Nim by Team BossCoders
+ * Team 5
+ * collaborators: First Last, First Last
+ */
+
 import java.io.*;
 import java.util.*;
 
