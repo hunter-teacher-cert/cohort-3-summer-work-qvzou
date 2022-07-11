@@ -136,8 +136,8 @@ public class SuperArray
       data[i]=data[i+1];
     }
     // subtract fom numElements;
-    data[numberElements-1]=0;
-    numberElements -- ;
+    //data[numberElements-1]=0; //changes the last meaningful index value to "0"
+    numberElements -- ; //decrease the # of meaningful elements
     /* YOUR SIMPLE+SMART CODE HERE */
   }
 

@@ -1,6 +1,6 @@
 /**
  * nth Fibonacci number generator by Team SumEmIfYaGotEm
- * First Last
+ * Qianhui Vanessa Zou
  * collaborators: First Last, First Last
  */
 
@@ -12,16 +12,18 @@ public class Fib
     if (n == 0){
       return 0;
     }
-    else if (n == 1 || n ==2){
-       return 1; 
+    if (n==1 || n==2){
+      return 1;
     }
-    else{
+    else {
       return fib(n-1) + fib(n-2);
     }
   }
 
   public static void main( String[] args )
-  { 
+  {
+
+    
       System.out.println( fib(0) ); // -> 0
       System.out.println( fib(1) ); // -> 1
       System.out.println( fib(2) ); // -> 1
@@ -32,6 +34,8 @@ public class Fib
       System.out.println( fib(10) ); // -> 55
       System.out.println( fib(20) ); // -> 6765
       System.out.println( fib(40) ); // -> 102334155
+     
+
   }//end main()
 
 }//end class Fib
