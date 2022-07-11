@@ -68,7 +68,7 @@ public class SuperArray
        then only write this section once the rest is tested and working.
     */
 
-    if (data.length <= numberElements){
+    if (data.length == numberElements){
       grow();
     }
     data[numberElements] = value;
