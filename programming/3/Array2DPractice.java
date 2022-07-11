@@ -188,7 +188,7 @@ public class Array2DPractice
      qqqXz
 
   */
-  public static void explodeAllChar(char[][] board, char ch)
+  public static void explodeAllChar(char[][] board, char c)
   {
     /* YOUR AWESOME CODE HERE */
    }
