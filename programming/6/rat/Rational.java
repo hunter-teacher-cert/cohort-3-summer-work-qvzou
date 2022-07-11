@@ -1,7 +1,6 @@
 /**
  * Rational class by Team BangPi
- * Qianhui Vanessa Zou
- * collaborators: Adam Prado, Jessica Novillo Argudo, Maxwell Yearwood
+ * Adam Prado, Jessca Novillo Argudo, Qianhui Vanessa Zou, Maxwell Yearwood
  */
 
 
