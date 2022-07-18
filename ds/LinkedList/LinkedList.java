@@ -43,27 +43,50 @@ public class LinkedList{
   */
   public String get(int index){
 		Node walker = head;
-		while(walker != null && index != 0){
-			index=index-1; 
-			walker = walker.getNext();
+    // walker != null is making sure we don't go PAST
+    // the linked list.
+		while(walker != null && index > 0){
+			index = index-1; //index--
+      walker = walker.getNext();
 		}
-		// What happens if walker is null? What should we do?
-		return walker.getData();
-		
+    /*
+    for(int i = 0; i < index && walker != null; i++){
+      walker = walker.getNext();
+    }
+    */
+
+    if(walker == null){
+      System.out.println("Oops, that's outside of our LinkedList size! Returning blank string.");
+      return "";
+    }else{
+      return walker.getData();
+    }
   }
 
   /**
   Return a string representation of the list
   */
   public String toString(){
-    return "";
+    Node walker = head;
+    String myString = "";
+    while(walker != null){
+      myString += walker.toString();
+      walker = walker.getNext();
+    }
+    myString += "NULL";
+    return myString;
   }
 
   /**
   returns the number of elements in the list
   */
   public int size(){
-    return 0;
+    int counter = 0;
+    Node walker = head;
+    while(walker != null){
+      counter++;
+    }
+    return counter;
   }
 
 
@@ -80,8 +103,19 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
+    Node walker = head;
+    Node myNode = new Node(value);
 
+    for(int i = 0; i < index-1 && walker.getNext() != null;
+        i++){
+      walker = walker.getNext();
+    }
+    
+    myNode.setNext(walker.getNext());
+    walker.setNext(myNode);
   }
+
+  
 
 
   /**
@@ -121,4 +155,3 @@ public class LinkedList{
   public void remove(int index){
   }
 }
-Footer
