@@ -133,27 +133,87 @@ public class SortSearch{
        This algorithm works on any ArrayList.
 
     */
-    public int linearSearch(int value){
-	
+	  public int linearSearch(int value){
+      //i is index: this is comparing the value and returning the i element
+	    for(int i =0; i<data.size(); i++) {
+      if (data.get(i) == value)
+      return i;// return the index of that element once the element is at i then you want to return that position
+    
+        
+      }
+      return -1;
+// return -1 is if the index at i value is not found then you're telling the computer that this is outside the array loop, it's like an error message
+      }
+    
+	//  return 0; // replace this return
+  //  }
 	
 	return 0; // replace this return
     }
     
     /**
        Implement a binary search as specified by the comments
+
+      find the first occurence without looping through the array the entire arary 
+you will still need a loop but search from the middle precondition is arry sorted from bigest to smallest or smallest to biggest
        
        This algorithm only works on sorted ArrayLists.
     */
-    public int binarySearch(int value){
+  public int binarySearch(int value){
+    // Kevin: Initialization outside the while loop
+  int low = 0;
+  int high = data.size() - 1;
+	// create assign variables representing the high, low and middle indices 
+    while (low < high) {
 
-	// create assign variables  representing the high, low and middle indices 
+      // Kevin: you wouldn't want line 190-191 inside the loop because that would make low = 0 everytime it loops, the low and high change in the if conditions you have below
+      /*low = 0;
+      high = data.size() - 1; */
+      int middle = (low + high)/2;
+    //error still occurs when we have more than 1 variable name equal to each other  ...I know...trying to figure it out?...cool, was just letting you know cause i tried running it ...the plus side was it was down to nine errors when I ran it before the last chnge...hopefully it's better now...now we are down to 5...awesome! do we need the for loop that is right under this?...i commented it out and i got 2 errors now
+      
 	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
-
-	return 0;
-	    
+  //for (int middle = (low + high)/2; middle<data.size(); middle--) {//this is starting the search in the middle of the array
+    //int middle = (low + high)/2;// this code is  looking for the middle value and next we will find the middle from the left side of the array
+    if (value == data.get(middle)) {
+       return middle;
     }
+     
+    if (value < data.get(middle)){
+    //this is finding the middle value of the left side of the array
+      high = middle - 1;
+      low = low;
+    //int middle = (low + high)/2;
+    
+      // // if (data.get(middle) == value ) {
+      // // return middle;
+      // }
+    }
+
+    else if (value > data.get(middle)) {
+      low = middle + 1;
+      high = high;
+     //int middle = (low +high)/2;
+
+      // Kevin: No need for this if condition, the one found at line 196-198 does the same job
+      /*if (value == data.get(middle)) {
+        return middle;
+      }//204 */
+    }//199
+          
+      
+    }
+
+    return -1; // Kevin: return -1 if value was never found inside array, this return is outside the while loop
+  
+  }//189
+} // missing bracket for class
+	// if the item is at data.get(middle), return middle
+	// otherwise, update high, low, and middle
+
+	//return 0;
+	    
+   // }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -161,24 +221,24 @@ public class SortSearch{
        This algorithm only works on sorted ArrayLists.
     */
 
-    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
+ //    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
 
-	// refer to class discussion
+	// // refer to class discussion
 	
-	return 0;
+	// return 0;
 	    
-    }
+ //    }
     
 	
-    public String toString(){
-	return ""+data;
-    };
+ //    public String toString(){
+	// return ""+data;
+ //    };
 
 
-    public void builtinSort(){
-	Collections.sort(data);
+ //    public void builtinSort(){
+	// Collections.sort(data);
 	
-    }
+ //    }
     
 
     
