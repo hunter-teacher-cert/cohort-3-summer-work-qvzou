@@ -73,7 +73,7 @@ public class AlPractice{
   - No other values should be modified.
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
-    Integer temp = dataList.get(index1);
+    int temp = dataList.get(index1);
     dataList.set(index1, dataList.get(index2));
     dataList.set(index2, temp);
   }
@@ -108,14 +108,8 @@ public class AlPractice{
   Postconditions:
   - The parameter ArrayLists should not be modified.
   */
-  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-
-    }
-    return null;//placeholder to compile.
-  }
-
-  public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-  ArrayList <Integer> arraySum = new ArrayList();
+  public static ArrayList<Integer> sumList(ArrayList<Integer>ListA, ArrayList<Integer>ListB){
+    ArrayList <Integer> arraySum = new ArrayList<Integer>();
       for (int i = 0; i < ListA.size(); i++){
       arraySum.add (ListA.get(i) + ListB.get(i));
       }
@@ -149,19 +143,19 @@ public class AlPractice{
     System.out.println(sumOfList(al));
 
     // Uncomment these to test swapElements
-    // swapElements(2,6);
-    //System.out.println(al);
+    swapElements(al,2,6);
+    System.out.println(al);
 
     // Uncomment these to test removeValue
-    // al.add(5);
-    // al.add(10);
-    // al.add(5);
-    // al.add(13);
-    // al.set(2,5);
-    // al.set(3,5);
-    // System.out.println(a);
-    // removeValue(al,5);
-    // System.out.println(a);
+     al.add(5);
+     al.add(10);
+     al.add(5);
+     al.add(13);
+     al.set(2,5);
+     al.set(3,5);
+     System.out.println(al);
+    removeValue(al,5);
+    System.out.println(al);
 
   }
 
