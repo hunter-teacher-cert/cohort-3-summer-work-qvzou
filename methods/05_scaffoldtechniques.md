@@ -3,7 +3,7 @@
 Roster: Alana Robinson, Ashley Ufret, Shana Elizabeth Henry, Qianhui Vanessa Zou
 
 
-### Technique: Diagramming
+### Technique: Diagramming (Storyboard in Elementary)
 
 #### Well-suited to...
 * algorithm
