@@ -146,9 +146,6 @@ public class SortSearch{
       }
     
 	//  return 0; // replace this return
-  //  }
-	
-	return 0; // replace this return
     }
     
     /**
@@ -179,7 +176,7 @@ you will still need a loop but search from the middle precondition is arry sorte
        return middle;
     }
      
-    if (value < data.get(middle)){
+    else if (value < data.get(middle)){
     //this is finding the middle value of the left side of the array
       high = middle - 1;
       low = low;
