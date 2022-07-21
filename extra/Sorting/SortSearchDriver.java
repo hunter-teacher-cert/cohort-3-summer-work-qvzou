@@ -41,15 +41,16 @@ public class SortSearchDriver {
 
   //Search project
   //linear Search
-  System.out.print(ss);
+  System.out.println("Linear Search:");
+  System.out.println(ss);
+  System.out.println("Index " + ss.linearSearch(3));
   System.out.println();
-  System.out.println("Value is found at index " + ss.linearSearch(3) + ".");
-
+  
   //binary Search
-  System.out.print(ss);
-  System.out.println();
-  System.out.println("Value is found at index " + ss.binarySearch(11) + ".");
-      
+  System.out.println("Binary Search:");
+  System.out.println(ss);
+  System.out.println("Index " + ss.binarySearch(11));
+  System.out.println();    
     
 	
 
