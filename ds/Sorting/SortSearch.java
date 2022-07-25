@@ -7,7 +7,7 @@ Sort Project:
 
 Part 1:  (BASIC)
   1. Analyze the two constructors - try to figure out how they work.
-  2. Compile and run the program (SortSearchDriver.java and SortSearch.java) and confirm
+  2. Compile and run the program (SortProjectDriver.java and SortProject.java) and confirm
   the behavior of the constructors.
 
   Part 2: (BASIC)
@@ -77,16 +77,16 @@ public class SortSearch{
       
     */
     public int findSmallestIndex(int start){
-	    int smallIndex = start;
-      // assigning minValue to compare the value with the minValue
-      int minValue = data.get(0);  
-	    for (int i = start; i < data.size(); i++){
-        if (data.get(i) < minValue) {
-          minValue = data.get(i);
-          smallIndex = i; 
-        }
+	  int smallIndex = start;
+    // assigning minValue to compare the value
+    int minValue = data.get(0);
+    for (int i = start; i < data.size(); i++) {
+      if (data.get(i) < minValue) {
+      minValue = data.get(i);
+      smallIndex = i;
       }
-	    return smallIndex;
+    }
+	  return smallIndex;
     }
 
 
@@ -105,16 +105,16 @@ public class SortSearch{
 
     */
     public void sort(){
-    for(int i = 0; i < data.size()-1; i++) {
+    for (int i = 0; i < data.size()-1; i++) {
       int temp = i;
-      for(int j = i + 1; j < data.size(); j++) {
+      for (int j = i + 1; j < data.size(); j++) {
         if (data.get(j) < data.get(temp)) {
           temp = j;
         }
       }
-      int minVal = data.get(temp);
-      data.set(temp, data.get(i));
-      data.set(i, minVal);
+    int minVal = data.get(temp);
+    data.set(temp, data.get(i));
+    data.set(i, minVal);
     }
 
     }
@@ -125,7 +125,7 @@ public class SortSearch{
     
     /**
        performs a linear search. Returns the index of the first occurence of
-       value in the ArrayList data or -1 if not found. (TA Kevin mention to look at indexOf as well, found first occurence in daily/2/ArrayPractice)(In geeksforgeeks found the following: indexOf(Object O)	The index the first occurrence of a specific element is either returned, or -1 in case the element is not in the list.)
+       value in the ArrayList data or -1 if not found.
 
        This works by starting at the first element and searching one element at a time 
        until either the element is found or you've looked at all the elements.
@@ -133,84 +133,48 @@ public class SortSearch{
        This algorithm works on any ArrayList.
 
     */
-	  public int linearSearch(int value){
-      //i is index: this is comparing the value and returning the i element
-	    for(int i =0; i<data.size(); i++) {
-      if (data.get(i) == value)
-      return i;// return the index of that element once the element is at i then you want to return that position
-    
-        
+    public int linearSearch(int value){
+	  for (int i = 0; i < data.size(); i++) {
+      if (data.get(i) == value) {
+        return i;
       }
-      return -1;
-// return -1 is if the index at i value is not found then you're telling the computer that this is outside the array loop, it's like an error message
-      }
-    
-	//  return 0; // replace this return
+    }
+	
+	return -1; // replace this return
     }
     
     /**
        Implement a binary search as specified by the comments
-
-      find the first occurence without looping through the array the entire arary 
-you will still need a loop but search from the middle precondition is arry sorted from bigest to smallest or smallest to biggest
        
        This algorithm only works on sorted ArrayLists.
     */
-  public int binarySearch(int value){
-    // Kevin: Initialization outside the while loop
-  int low = 0;
-  int high = data.size() - 1;
-	// create assign variables representing the high, low and middle indices 
-    while (low < high) {
+    public int binarySearch(int value){
 
-      // Kevin: you wouldn't want line 190-191 inside the loop because that would make low = 0 everytime it loops, the low and high change in the if conditions you have below
-      /*low = 0;
-      high = data.size() - 1; */
-      int middle = (low + high)/2;
-    //error still occurs when we have more than 1 variable name equal to each other  ...I know...trying to figure it out?...cool, was just letting you know cause i tried running it ...the plus side was it was down to nine errors when I ran it before the last chnge...hopefully it's better now...now we are down to 5...awesome! do we need the for loop that is right under this?...i commented it out and i got 2 errors now
-      
+	// create assign variables  representing the high, low and middle indices 
+    int low = 0;
+    int high = data.size() - 1;
+    int middle = (low + high)/2;
 	// while we're not done:
-  //for (int middle = (low + high)/2; middle<data.size(); middle--) {//this is starting the search in the middle of the array
-    //int middle = (low + high)/2;// this code is  looking for the middle value and next we will find the middle from the left side of the array
-    if (value == data.get(middle)) {
-       return middle;
-    }
-     
-    else if (value < data.get(middle)){
-    //this is finding the middle value of the left side of the array
-      high = middle - 1;
-      low = low;
-    //int middle = (low + high)/2;
-    
-      // // if (data.get(middle) == value ) {
-      // // return middle;
-      // }
-    }
-
-    else if (value > data.get(middle)) {
-      low = middle + 1;
-      high = high;
-     //int middle = (low +high)/2;
-
-      // Kevin: No need for this if condition, the one found at line 196-198 does the same job
-      /*if (value == data.get(middle)) {
+    while (low < high) {
+    	//   if the item is at data.get(middle), return middle
+      if (value == data.get(middle)) {
         return middle;
-      }//204 */
-    }//199
-          
-      
+      }
+      //   otherwise, update high, low, and middle
+      else if (value < data.get(middle)) {
+        high = middle - 1;
+        middle = (low + high)/2;
+      }
+      else if (value > data.get(middle)) {
+        low = middle + 1;
+        middle = (low + high)/2;
+      }
     }
 
-    return -1; // Kevin: return -1 if value was never found inside array, this return is outside the while loop
-  
-  }//189
-} // missing bracket for class
-	// if the item is at data.get(middle), return middle
-	// otherwise, update high, low, and middle
 
-	//return 0;
+	return -1;
 	    
-   // }
+    }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -218,25 +182,71 @@ you will still need a loop but search from the middle precondition is arry sorte
        This algorithm only works on sorted ArrayLists.
     */
 
- //    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
+    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
 
-	// // refer to class discussion
+	// refer to class discussion
 	
-	// return 0;
+	return 0;
 	    
- //    }
+    }
     
 	
- //    public String toString(){
-	// return ""+data;
- //    };
+    public String toString(){
+	return ""+data;
+    };
 
 
- //    public void builtinSort(){
-	// Collections.sort(data);
+    public void builtinSort(){
+	Collections.sort(data);
 	
- //    }
+    }
     
+        /* Merge Sort Stuff after here */
+    /**
+       Builds and returns an ArrayList that's already in increasing order.
+       You can use this method to test your merge method.
+    */
+    public ArrayList<Integer> buildIncreasingList(int size){
+	ArrayList<Integer>  newlist = new ArrayList<Integer>();
+	Random r = new Random();
+	int nextval = r.nextInt(20)+1;
+	for (int i=0;i<size;i++){
+	    newlist.add(nextval);
+	    nextval = nextval + r.nextInt(20);
+	}
 
+	return newlist;
+	}
+
+    /**
+       this routine should create and return a new ArrayList of
+       integers and fill it by merging list1 and list2 into the new
+       list.
+       list1 and list2 are already sorted in increasing order.
+       Example:
+       If list1 contains [1,5,17,25]
+       and list2 contains [3,6,10,30,40,50]
+       The new list will contain:
+       [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]
+       
+    */
+       
+    public ArrayList<Integer> merge(ArrayList<Integer> list1,
+				    ArrayList<Integer> list2){
+  //from the parameters assume there is already a list generated and sorted
+	// code for merge
+  ArrayList<Integer> newlist = new ArrayList<Integer>() {
+    int index1 = 0;
+    int index2 = 0;
+
+    while (index1 < list1.size() && index2 < list2.size())
+  }
     
+    
+	
+	return new ArrayList<Integer>(); // replace this line
+    }
+
+
+  
 }

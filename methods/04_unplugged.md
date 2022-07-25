@@ -35,20 +35,6 @@ advanced: create your own if/then statement Simon Says game
 Captured varied responses from students - use technology tools such as Seesaw to capture students' response. Seesaw is a free tool that allows students to video-tape or audio tape their responses.
 
 ### Go!
-1. a thing to do...
-1. another thing to do...
-1. another thing to do...
-1. ...to actually run the activity
-1. NOTA BENE! You will note that this list is 1-1-1-1... but when you view the rendered markdown, it will appear as 1-2-3-etc. GitHub will automatically do this for you.
-
-### Related resources
-* [a link (this is the visible text)](https://xkcd.com)
-* for when you just want to show the link (gh will still make it clickable): https://xkcd.com
-* a story
-* a book
-* name of a person who know a lot
-* etc
-
 Simon Says: If/Then:
 https://minecraft.makecode.com/courses/csintro/conditionals/unplugged
   The teacher will be purposeful in the choices made for the conditional commands (getting to know your students) such that this game can be engaging while also informative to differentiate small groups for students who have misconceptions or are not able to demonstrate understanding consistently. IE:  
@@ -63,8 +49,9 @@ IF your favorite monster in Minecraft is a zombie, THEN make zombie noises and m
 Equity in CS/SEL: Gives the teacher an opportunity for an explicit example of Equity in CS. Discuss a safe environment that is fair and inclusive, using characteristics that are not harmful or demeaning to others. Especially, for students to keep this in mind as a condition when its their turn to write/add their own if then statements. It can also offer the opportunity to discuss audience when designing a game or program, mindful of accessibility, language, etc. and possible iterations or modifications to the game/program.
 
 
+
+### Related resources
+* [a link (this is the visible text)](https://xkcd.com)
+* for when you just want to show the link (gh will still make it clickable): https://xkcd.com
+
 * * *
-
-Done already? Looking to be xtra? (this is entirely optional... only if you see a place where an image could help in a big way, and you have some time to noodle with your markdown)
-
-A not-too-bad how-to guide for inserting images in your markdown: https://www.foxinfotech.in/2019/12/github-markdown-add-an-image-to-readme-md-file.html

@@ -1,0 +1,32 @@
+Qianhui Vanessa Zou
+Methods Summer 2022
+GALLERY TOUR LOG
+
+
+USAGE OF TOP SECTION: 
+* Fill in discoveries etc section as you go, or after your is complete.
+* Replicate the 
+* Delete these instructions once read.
+====================================================
+DISCOVERIES:
+* any cool tips/tricks/hacks you learned
+Using markdown cheatsheet to help create github pages
+
+
+LINGERING QUESTIONS:
+* 1 per line, please
+How to make an image clickable with markdown?
+
+COMMENTS/CONCERNS/OTHER:
+* 1 per line, please
+====================================================
+Update to website from changes in replit varies
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site: Kate Maschmeyer
+URL: https://mrlamorie.github.io/nycscertweb/
+notable aspect: Detailed and have dividers separating each course
+what is cool about this site:  I like how detailed it is
+-------------------------------------
